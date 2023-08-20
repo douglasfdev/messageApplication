@@ -55,3 +55,15 @@ Resposta é uma lista de produtos {Status 200 OK}
   }
 ]
 ```
+
+----
+> **Caso queira mandar uma mensagem via terminal do kafka para conferir se está sendo enviado as mensagens siga as etapas a baixo:**
+
+##### Para envio de mensagens via Kafka
+
+Entre no container com comando shell: `docker-compose exec kafka bash`
+E coloque o seguinte comando dentro do container: `kafka-console-producer --bootstrap-server=localhost:9092 --topic=products`
+Depois basta colar um json válido como esse de exemplo, em uma única linha:
+```json
+{"name": "XPTO","price": 100}
+```
