@@ -1,13 +1,7 @@
-FROM golang:1.10.3-alpine
+FROM golang:latest
 
-WORKDIR /go/src/github.com/apanagiotou/go-kafka-to-s3/
+WORKDIR /go/app
 
-COPY . .
-
-RUN apk add librdkafka
-
-FROM scratch
-COPY --from=0 /go/src/github.com/apanagiotou/go-kafka-to-s3 .
-ENTRYPOINT ["./go-kafka-to-s3"]
+RUN apt-get update && apt-get install -y librdkafka-dev
 
 CMD ["tail", "-f", "/dev/null"]
