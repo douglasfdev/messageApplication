@@ -12,7 +12,7 @@ type ListProductsUseCase struct {
 	ProductRepository entity.ProductRepository
 }
 
-func NewListListProductsUseCase(productRepository entity.ProductRepository) *ListProductsUseCase {
+func NewListProductsUseCase(productRepository entity.ProductRepository) *ListProductsUseCase {
 	return &ListProductsUseCase{ProductRepository: productRepository}
 }
 

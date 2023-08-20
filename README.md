@@ -18,7 +18,7 @@ Basta rodar o comando `docker exec -it mysql bash`
 #### Para criar um tópico no kafka
 
 Entre no container com comando shell: `docker-compose exec kafka bash`
-E coloque o seguinte comando dentro do container: `kafka-topics --botstrap-server=localhost:9092 --topic=products --create`
+E coloque o seguinte comando dentro do container: `kafka-topics --bootstrap-server=localhost:9092 --topic=products --create`
 
 #### Para rodar a aplicação
 

@@ -32,8 +32,8 @@ services:
     ports:
       - "2181:2181"
     environment:
-      - ZOOKEPER_CLIENT_PORT=2181
-      - ZOOKEPER_TICK_TIME=2000
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
 
   kafka:
     image: confluentinc/cp-server:7.3.0
